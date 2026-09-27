@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripciones Netflix - Tus películas al mejor precio</title>
+    <style>
+        :root {
+            --primary: #E50914;
+            --dark-bg: #141414;
+            --card-bg: #1f1f1f;
+            --text-light: #ffffff;
+            --text-gray: #aaaaaa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .btn-contact {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-contact:hover {
+            background-color: #b80710;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, #141414 100%), 
+                        url('https://revistamercado.do/wp-content/uploads/2022/09/Netflix.jpeg') center/cover;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* Planes */
+        .plans-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .plan-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px 20px;
+            border: 1px solid #333;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .plan-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .plan-price {
+            font-size: 2rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 25px;
+            color: var(--text-gray);
+            text-align: left;
+        }
+
+        .plan-features li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .plan-features li::before {
+            content: "✓";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+        }
+
+        .btn-buy {
+            display: block;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-buy:hover {
+            background-color: #b80710;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #0b0b0b;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">NETFLIX</div>
+        <a href="https://wa.me/+584141913868" class="btn-contact" target="_blank">Contactar</a>
+    </header>
+
+    <section class="hero">
+        <h1>El mejor entretenimiento al mejor precio</h1>
+        <p>Accede a tus series y películas favoritas de Netflix de forma rápida, económica y con soporte garantizado.</p>
+    </section>
+
+    <section class="plans-container">
+        <h2>Elige tu plan ideal</h2>
+        <div class="plans-grid">
+            
+            <!-- Plan 1 -->
+            <div class="plan-card">
+                <div>
+                    <h3 class="plan-title">Plan Básico</h3>
+                    <div class="plan-price">$3<span style="font-size: 1rem; color: #aaa;">/mes</span></div>
+                    <ul class="plan-features">
+                        <li>Calidad HD / 720p</li>
+                        <li>Juegos, series y películas; sin publicidad y sin límite</li>
+                        <li>Puedes ver contenido en 1 dispositivo</li>
+                        <li>Puedes descargar contenido en 1 dispositivo</li>
+                        <li>Soporte directo</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/+584141913868?text=Hola,%20quiero%20el%20Plan%20Básico" class="btn-buy" target="_blank">Solicitar por WhatsApp</a>
+            </div>
+
+            <!-- Plan 2 -->
+            <div class="plan-card">
+                <div>
+                    <h3 class="plan-title">Plan Estándar</h3>
+                    <div class="plan-price">$4<span style="font-size: 1rem; color: #aaa;">/mes</span></div>
+                    <ul class="plan-features">
+                        <li>Calidad Full HD / 1080p</li>
+                        <li>Juegos, series y películas; sin publicidad y sin límite</li>
+                        <li>Puedes ver contenido en 1 dispositivo</li>
+                        <li>Puedes descargar contenido en 1 dispositivo</li>
+                        <li>Soporte directo</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/+584141913868?text=Hola,%20quiero%20el%20Plan%20Estándar" class="btn-buy" target="_blank">Solicitar por WhatsApp</a>
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="plan-card">
+                <div>
+                    <h3 class="plan-title">Plan Premium</h3>
+                    <div class="plan-price">$5<span style="font-size: 1rem; color: #aaa;">/mes</span></div>
+                    <ul class="plan-features">
+                        <li>Calidad Ultra HD / 4K + HDR</li>
+                        <li>Juegos, series y películas; sin publicidad y sin límite</li>
+                        <li>Puedes ver contenido en 1 dispositivo</li>
+                        <li>Puedes descargar contenido en 1 dispositivo</li>
+                        <li>Soporte directo</li>
+                        <li>Audio espacial de Netflix</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/+584141913868?text=Hola,%20quiero%20el%20Plan%20Premium" class="btn-buy" target="_blank">Solicitar por WhatsApp</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Netflix. Servicio de gestión de suscripciones digitales independiente.</p>
+    </footer>
+
+</body>
+</html>
